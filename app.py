@@ -292,16 +292,16 @@ while i == True:
         while j == True:
             if value2 == 1:   #return to main menu
                 j = False
-             elif value2 == 2:   #print out couriers to screen
-                 print('                           ')
-                 x = input("please choose one of bellow order updat")
-                 for order in orders:
-                     for keys, values in orders[order].items():
-                         print(keys + ": " + str(values))
-                     print("-------------------------------------------") 
-                 value3 = input("if you want to creat new order please enter 1")
-                 if value3 == 1:
-                     valu2 = 3                 
+            elif value2 == 2:   #print out couriers to screen
+                print('                           ')
+                x = input("please choose one of bellow order updat")
+                for order in orders:
+                    for keys, values in orders[order].items():
+                        print(keys + ": " + str(values))
+                    print("-------------------------------------------") 
+                    value3 = input("if you want to creat new order please enter 1")
+                    if value3 == 1:
+                        valu2 = 3                 
             elif value2 == 3:  #allow user to pick courier from couriers
                 os.system("cls")
                 dictionary = {}
@@ -318,28 +318,28 @@ while i == True:
                 
             elif value2 == 4:
                 print(" ")
+                os.system("cls")
+                print("Do you want to update?")
+                value5 = int(input("If yes please enter order number for updating and if no please enter 0\n"))
+                if value5 == 0:
+                    continue
+                elif value5 == 1:
                     os.system("cls")
-                    print("Do you want to update?")
-                    value5 = int(input("If yes please enter order number for updating and if no please enter 0\n"))
-                    if value5 == 0:
-                        continue
-                    elif value5 == 1:
-                        os.system("cls")
-                        print("It is your previous order")
-                        for keys, values in orders[value5].items():
-                             print(keys + ": " + str(values)) 
-                        for i, j in orders[value5].items():
-                            x = str(input("if you want to update the value of {} please enter the new value and if no, please skip it"))
-                            if len(x) > 0:
-                                orders[value5][i] = x
-                            else:
-                                orders[value5][i] = j
-                                
-                        os.system("cls")
-                        print("It is your new order")
-                        for keys, values in orders[y].items():
-                            print(keys + ": " + str(values))
-                        print("-------------------------------------------") 
+                    print("It is your previous order")
+                    for keys, values in orders[value5].items():
+                        print(keys + ": " + str(values)) 
+                    for i, j in orders[value5].items():
+                        x = str(input("if you want to update the value of {} please enter the new value and if no, please skip it"))
+                        if len(x) > 0:
+                            orders[value5][i] = x
+                        else:
+                            orders[value5][i] = j
+                            
+                    os.system("cls")
+                    print("It is your new order")
+                    for keys, values in orders[y].items():
+                        print(keys + ": " + str(values))
+                    print("-------------------------------------------") 
     
                     
             elif value4 == 5:   #allow user to remove order from list of orders
